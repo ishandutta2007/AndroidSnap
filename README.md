@@ -1,4 +1,4 @@
-Android Snap
+Android Snap [![Build Status](https://travis-ci.org/mhsjlw/AndroidSnap.svg)](https://travis-ci.org/mhsjlw/AndroidSnap)
 ============
 
 SnapChat clone written in Android, based off of the Treehouse tutorial!
