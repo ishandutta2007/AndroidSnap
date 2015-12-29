@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.mhsjlw.android_snap"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="me.mhsjlw.android_snap.SnapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="me.mhsjlw.android_snap.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.mhsjlw.android_snap.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="me.mhsjlw.android_snap.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="me.mhsjlw.android_snap.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="me.mhsjlw.android_snap.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="me.mhsjlw.android_snap.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.mhsjlw.android_snap.MainActivity" />
+        </activity>
+        <activity
+            android:name="me.mhsjlw.android_snap.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName="me.mhsjlw.android_snap.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.mhsjlw.android_snap.MainActivity" />
+        </activity>
+        <activity
+            android:name="me.mhsjlw.android_snap.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName="me.mhsjlw.android_snap.MainActivity" android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.mhsjlw.android_snap.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
